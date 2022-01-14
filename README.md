@@ -1,6 +1,7 @@
 Versions:
 - Terraform: v0.14.2
 - eks module: 18.0.4
+- vpc module: 3.11.3
 - helm provider: v2.4.1 
 - aws provider: v3.71.0
 - kubernetes provider: v2.7.1
