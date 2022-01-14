@@ -2,19 +2,19 @@ terraform {
   backend "s3" {
     bucket = "my-bucket-exercise"
     key    = "myapp/state.tfstate"
-    region  = "eu-west-3"
+    region  = var.region
   }
 }
 
 provider "aws" {
   # version = ">= 2.28.1"
-  region  = "eu-west-3"
+  region  = var.region
 }
 
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "my-cluster" # "my-eks-${random_string.suffix.result}"
+  cluster_name = var.cluster_name # "my-eks-${random_string.suffix.result}"
 }
 
 resource "random_string" "suffix" {

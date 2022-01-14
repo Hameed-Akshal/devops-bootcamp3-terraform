@@ -1,7 +1,7 @@
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
   cluster_name    = local.cluster_name
-  cluster_version = "1.21"
+  cluster_version = var.k8s_version
   subnet_ids      = module.vpc.private_subnets
 
   tags = {
@@ -21,7 +21,7 @@ module "eks" {
 
       instance_types = ["t3.small"]
       labels = {
-        Environment = "dev"
+        Environment = var.env_prefix
       }
     }
   }
