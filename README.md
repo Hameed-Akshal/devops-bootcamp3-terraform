@@ -1,5 +1,5 @@
 Versions:
-- Terraform: v0.14.2
+- Terraform: v0.14.2,v1.1.3 
 - eks module: 18.0.4
 - vpc module: 3.11.3
 - helm provider: v2.4.1 
