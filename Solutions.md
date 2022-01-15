@@ -6,12 +6,12 @@
 <summary>Exercise 1: Create Terraform project to spin up EKS cluster </summary>
  <br />
  
-##### This project provisions an EKS cluster with the following configuration:
-- **S3 bucket** as a storage for Terraform state
-- K8s cluster with **3 nodes** and **1 fargate profile** for "my-app" namespace
-- **Mysql** chart with 3 replicas
-- K8s version **1.21**
-- AWS region for VPC, EKS and S3 bucket: **"eu-west-3**" 
+##### This project provisions an EKS cluster with the following configuration
+:arrow_right: **S3 bucket** as a storage for Terraform state
+:arrow_right: K8s cluster with **3 nodes** and **1 fargate profile** for "my-app" namespace
+:arrow_right: **Mysql** chart with 3 replicas
+:arrow_right: K8s version **1.21**
+:arrow_right: AWS region for VPC, EKS and S3 bucket: **"eu-west-3**" 
 
 :warning: Make sure to change the region for your cluster in all relevant places!
 
@@ -20,16 +20,16 @@
 - _Terraform modules_
 - _Terraform providers_
 
-##### To execute the project:
+##### To execute the project
 - set variables values in the **"dev.tfvars"** file
 - set **"bucket name"** and **"bucket region"** values in the terraform configuration in the **"vpc.tf"** file
 - `terraform init` - installs all the providers and modules used in the project
 - `terraform apply` - executes the Terraform script
 
-To access the cluster with kubectl, once it's configured, execute the following command:
-`aws eks update-kubeconfig --name {cluster-name} --region {your-region}`
+##### To access the cluster with kubectl, once it's configured 
+- `aws eks update-kubeconfig --name {cluster-name} --region {your-region}`
+_ex: `aws eks update-kubeconfig --name my-cluster --region eu-west-3`_
 
-ex: `aws eks update-kubeconfig --name my-cluster --region eu-west-3` 
 :information_source: This will configure the kubeconfig file in the ~/.kube/ folder
 
 Verify the cluster access
