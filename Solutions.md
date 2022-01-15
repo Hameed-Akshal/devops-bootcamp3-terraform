@@ -16,7 +16,7 @@
 
 :warning: Make sure to change the region for your cluster in all relevant places!
 
-:information_source: Check **README.md** file for the exact versions used in the projects for: 
+:information_source: Check **README.md** file for the exact versions used in the projects for 
 - _Terraform_ 
 - _Terraform modules_
 - _Terraform providers_
@@ -48,7 +48,7 @@ _ex: `aws eks update-kubeconfig --name my-cluster --region eu-west-3`_
 
 ##### This project includes a Jenkinsfile for CI/CD pipeline
 
-Values of the following environment variables need to be set inside jenkinsfile:
+Values of the following environment variables need to be set inside jenkinsfile
 - TF_VAR_env_prefix = "dev"
 - TF_VAR_k8s_version = "1.21"
 - TF_VAR_cluster_name = "my-cluster"
