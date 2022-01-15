@@ -5,11 +5,7 @@
 <details>
 <summary>Exercise 1: Create Terraform project to spin up EKS cluster </summary>
  <br />
-
-**Example Terraform Project**
-
-#### This project provisions an EKS cluster with following configuration
-
+##### This project provisions an EKS cluster with following configuration
 - **S3 bucket** as a storage for Terraform state
 - K8s cluster with **3 nodes** and **1 fargate profile** for "my-app" namespace
 - **Mysql** chart with 3 replicas
@@ -18,12 +14,12 @@
 
 :warning: Make sure to change the region for your cluster in all relevant places!
 
-Check **README.md** file for the exact versions used in the projects for: 
+:information_source: Check **README.md** file for the exact versions used in the projects for: 
 - _Terraform_ 
 - _Terraform modules_
 - _Terraform providers_
 
-To execute the project:
+##### To execute the project:
 - set variables values in the **"dev.tfvars"** file
 - set **"bucket name"** and **"bucket region"** values in the terraform configuration in the **"vpc.tf"** file
 - `terraform init` - installs all the providers and modules used in the project
@@ -33,7 +29,7 @@ To access the cluster with kubectl, once it's configured, execute the following 
 `aws eks update-kubeconfig --name {cluster-name} --region {your-region}`
 
 ex: `aws eks update-kubeconfig --name my-cluster --region eu-west-3` 
-This will configure the kubeconfig file in the ~/.kube/ folder
+:information_source: This will configure the kubeconfig file in the ~/.kube/ folder
 
 Verify the cluster access
 - `kubectl get nodes`
