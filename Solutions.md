@@ -7,10 +7,15 @@
  <br />
  
 ##### This project provisions an EKS cluster with the following configuration
+
 :arrow_right: **S3 bucket** as a storage for Terraform state
+
 :arrow_right: K8s cluster with **3 nodes** and **1 fargate profile** for "my-app" namespace
+
 :arrow_right: **Mysql** chart with 3 replicas
+
 :arrow_right: K8s version **1.21**
+
 :arrow_right: AWS region for VPC, EKS and S3 bucket: **"eu-west-3**" 
 
 :warning: Make sure to change the region for your cluster in all relevant places!
@@ -28,11 +33,12 @@
 
 ##### To access the cluster with kubectl, once it's configured 
 - `aws eks update-kubeconfig --name {cluster-name} --region {your-region}`
+
 _ex: `aws eks update-kubeconfig --name my-cluster --region eu-west-3`_
 
 :information_source: This will configure the kubeconfig file in the ~/.kube/ folder
 
-Verify the cluster access
+##### To verify the cluster access
 - `kubectl get nodes`
 - `eksctl get fargateprofile --cluster my-cluster`
 
