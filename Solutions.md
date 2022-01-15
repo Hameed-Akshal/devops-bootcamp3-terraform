@@ -6,7 +6,7 @@
 <summary>Exercise 1: Create Terraform project to spin up EKS cluster </summary>
  <br />
  
-##### This project provisions an EKS cluster with following configuration
+##### This project provisions an EKS cluster with the following configuration:
 - **S3 bucket** as a storage for Terraform state
 - K8s cluster with **3 nodes** and **1 fargate profile** for "my-app" namespace
 - **Mysql** chart with 3 replicas
