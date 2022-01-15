@@ -3,7 +3,7 @@
 ******
 
 <details>
-<summary>Exercise 1: Create Terraform project to spin up EKS cluster </summary>
+<summary>Exercise 1 & 2: Create Terraform project to spin up EKS cluster </summary>
  <br />
  
 ##### This project provisions an EKS cluster with the following configuration
